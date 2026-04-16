@@ -1,7 +1,15 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--cream:#F9F7F4;--ink:#1A1A18;--muted:#888;--border:#E0DDD8}
+:root{
+  --cream:#F9F7F4;
+  --ink:#1A1A18;
+  --muted:#888;
+  --border:#E0DDD8;
+
+  --font-serif: 'Georgia';
+  --font-sans: 'Arial';
+}
 body{background:var(--cream);color:var(--ink);font-family:var(--font-serif),'Georgia',serif}
 
 nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem;border-bottom:0.5px solid var(--border)}
@@ -274,7 +282,7 @@ function drawCanvas(id, type) {
   }
 }
 
-window.addEventListener('load', function() {
+window.onload = () => {
   drawCanvas('c1','abstract');
   drawCanvas('c2','sketch');
   drawCanvas('c3','geo');
@@ -294,3 +302,6 @@ window.addEventListener('load', function() {
   });
 });
 </script>
+.artwork-img{
+  background:red;
+}
